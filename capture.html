@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180150140-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180150140-1');
+    </script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Capture Objects</title>
+</head>
+<body onload="start();">
+    <main class="challenge-background">
+        <video id="video"></video>
+        <canvas id="canvas" hidden></canvas>
+        <div id="snap-div" class="snap-div">
+            <img src="images/capture.png" onclick="snap()" id="captureButton" class="rec-icon" >
+            <button id="retakeButton" onclick="retake();" hidden>Retake</button>
+            <button id="proceedButton" onclick="proceed();" hidden>Continue</button>
+        </div>
+    </main>
+    <script src="js/camerascript.js"></script>
+</body>
+</html>

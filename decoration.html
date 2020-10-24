@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180150140-1"></script>
+    <script>
+        if(localStorage.getItem("diwaliImage") == null){
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180150140-1');
+    </script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Select Decoration</title>
+</head>
+<body>
+    <main class="challenge-background">
+        <div style="text-align: center; padding-top: 100px;">
+            <h1>Select Element</h1>
+        </div>
+        <ul style="list-style: none; text-align: center;">
+            <li>
+                <img src="images/toran-button-1.png" style="width:70%; cursor:pointer" onclick="getResult(1);">
+            </li>
+            <li>
+                <img src="images/toran-button-2.png" style="width:70%; cursor:pointer" onclick="getResult(2);">
+            </li>
+            <li>
+                <img src="images/toran-button-3.png" style="width:70%; cursor:pointer" onclick="getResult(3);">
+            </li>
+        </ul>
+    </main>
+    <div id="overlay-background">
+        <div id="overlay-content">
+            <h1 style="color:#303030; font-weight: normal;">Please wait.</h1>
+            <h3>Your result is being generated</h3>
+            <br><br>
+            <img src="images/loader.gif">
+        </div>
+    </div>
+</body>
+</html>
